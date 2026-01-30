@@ -1,7 +1,7 @@
-<section class="max-w-4xl w-full">
+<section class="min-h-screen w-full mb-28">
   <div class="font-sans text-3xl mb-8">
     <span class="mr-2 text-green">&gt;</span>
-    <span class="text-white text-2x1">{{ title }} </span>
+    <span class="text-white text-2xL">{{ title }} </span>
     <span class="mr-2 text-green">|</span>
   </div>
   <div class="font-sans text-2xl mb-8">
@@ -16,4 +16,18 @@
   <p class="font-sans text-xl mb-8 text-gray">
     {{ description }}
   </p>
+
+  <!-- Navigation section  -->
+  <nav class="flex flex-col items-center justify-center space-y-3">
+    @for (button of navigationButtons; track button.route) {
+      <a [href]="button.route" class="w-full no-underline">
+        <div
+          class="bg-[#111] border border-border rounded grid grid-cols-[auto_1fr] items-center justify-center gap-4 px-4 py-3 text-sm group font-mono hover:border-green transition-colors"
+        >
+          <span class="text-green justify-self-end">$</span>
+          <span class="text-white text-center">{{ button.label }}</span>
+        </div>
+      </a>
+    }
+  </nav>
 </section>

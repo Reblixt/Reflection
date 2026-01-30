@@ -3,20 +3,35 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
+@layer theme {
+  :root,
+  :host {
+    --font-sans:
+      ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
+  }
+}
+
 @theme {
   --color-black: #0a0a0a;
   --color-base: #222;
   --color-white: #f0f0f0;
   --color-green: #00ff41;
   --color-gray: #6e6e6e;
+  --color-gray-muted: #888;
+  --color-border: #333;
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 @utility bg-grid {
-  --grid-color: #222;
+  --grid-color: rgba(255, 255, 255, 0.01); /* 5% opacity = very thin appearance */
   --grid-size: 50px;
+
   background-image:
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
