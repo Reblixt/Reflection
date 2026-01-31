@@ -13,7 +13,7 @@ interface NavButton {
 export class Hero {
   protected readonly title: string = 'Bulding robust system from end to end';
   protected readonly userName: string = 'Carl Klöfverskjöld';
-  protected readonly subTitle: string = '// Fullstack developer';
+  protected readonly subTitle: string = '/ /  Fullstack developer';
   protected readonly description: string = 'Linux enthuriast, Neovim and Terminal delver';
 
   protected readonly navigationButtons: NavButton[] = [

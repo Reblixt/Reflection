@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  flux-orbit:
+    image: runonflux/orbit:latest
+    ports:
+      - '4200:3000'
+      - '9001:9001'
+    environment:
+      - GIT_REPO_URL=https://github.com/Reblixt/Reflection
+      - APP_PORT=4200
+      - NODE_ENV=production
+      - PROJECT_TYPE=bun
+      - BUN_VERSION=latest
+      - BUILD_COMMAND=bun run build
+      - RUN_COMMAND=bun start
+      - FORCE_INSTALL=true
+    volumes:
+      - app-data:/app
+    restart: unless-stopped
+
+volumes:
+  app-data:
