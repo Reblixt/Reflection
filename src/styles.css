@@ -14,7 +14,11 @@
       monospace;
   }
 }
-
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 @theme {
   --color-black: #0a0a0a;
   --color-base: #222;
@@ -22,7 +26,7 @@
   --color-green: #00ff41;
   --color-gray: #6e6e6e;
   --color-gray-muted: #888;
-  --color-border: #333;
+  --color-border: #222222;
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;

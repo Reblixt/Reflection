@@ -10,8 +10,8 @@ services:
       # - NODE_ENV=production
       - PROJECT_TYPE=bun
       # # - BUN_VERSION=latest
-      - BUILD_COMMAND=bun i && bun run build
-      - RUN_COMMAND=bun run serve:ssr:reflection
+      # - BUILD_COMMAND=bun i && bun run build
+      # - RUN_COMMAND=bun run
       # - FORCE_INSTALL=true
     volumes:
       - app-data:/app

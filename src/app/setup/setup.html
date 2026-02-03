@@ -1,0 +1,84 @@
+<section id="setup" class="min-h-screen flex flex-col w-full justify-items-start">
+  <div class="mx-auto flex flex-col">
+    <h2 class="font-mono text-2xl text-green left-0">{{ title }}</h2>
+    <p class="font-sans text-xl mb-8 text-gray">
+      {{ description }}
+    </p>
+
+    <div class="flex flex-wrap gap-6">
+      <!-- Grid one -->
+      <div class="flex-1 min-w-75 max-w-241.5">
+        <h3 class="text-white py-4"><span class="text-green">$</span> Neovim</h3>
+        <div class="relative bg-[#111] border border-0.5 border-border rounded overflow-hidden">
+          <!-- Header of box -->
+          <div class="relative bg-[#111] border border-0.5 border-border rounded overflow-hidden">
+            <p class="p-2 text-gray">image</p>
+          </div>
+          <!-- Body of box -->
+          <div class="">
+            <img
+              ngSrc="/neovim/neovim.png"
+              alt="Neovim editor screenshot"
+              width="800"
+              height="600"
+              class="w-full md:max-h-2xl"
+              priority
+            />
+            <!-- text  -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid two -->
+      <div class="flex-1 min-w-75 max-w-162.5">
+        <h3 class="text-white py-4"><span class="text-green">$</span> System Info</h3>
+        <div class="relative bg-[#111] border border-0.5 border-border rounded overflow-hidden">
+          <!-- Header of box -->
+          <div class="flex items-center border-b-0.5 border-border bg-[#1a1a1a]">
+            <div class="flex p-2">
+              <div class="rounded-full h-3 w-3 bg-red-400 mx-2"></div>
+              <div class="rounded-full h-3 w-3 bg-yellow-400 mr-2"></div>
+              <div class="rounded-full h-3 w-3 bg-green mr-4"></div>
+            </div>
+            <p class="text-gray">fastfetch</p>
+          </div>
+
+          <!-- Body of box -->
+          <div class="m-2">
+            @for (item of fastfetch; track item.label) {
+              <p class="text-green font-mono py-1 ml-2 text-sm">
+                {{ item.label }}<span class="text-white font-mono">{{ item.value }}</span>
+              </p>
+            }
+          </div>
+        </div>
+        <h3 class="text-white py-4"><span class="text-green">$</span> Hardware info</h3>
+        <div class="relative bg-[#111] border border-0.5 border-border rounded overflow-hidden">
+          <!-- Header of box -->
+          <div class="flex items-center border-b-0.5 border-border bg-[#1a1a1a]">
+            <div class="flex p-2">
+              <div class="rounded-full h-3 w-3 bg-red-400 mx-2"></div>
+              <div class="rounded-full h-3 w-3 bg-yellow-400 mr-2"></div>
+              <div class="rounded-full h-3 w-3 bg-green mr-4"></div>
+            </div>
+            <p class="text-gray">lsusb</p>
+          </div>
+
+          <!-- Body of box -->
+          <div class="m-2">
+            @for (item of hardware; track item.label) {
+              <p class="text-green font-mono py-1 ml-2 text-sm">
+                {{ item.label }}<span class="text-white font-mono">{{ item.value }}</span>
+              </p>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bollow  -->
+    <div>
+      <h3>Development workflow</h3>
+    </div>
+  </div>
+</section>
